@@ -1,0 +1,44 @@
+﻿@model ProfileFormVM
+
+@{
+    ViewData["Title"] = "Modify Profile";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <h2>Create a new User.</h2>
+            <hr />
+            <input type="hidden" asp-for="Id" />
+            <div class="form-floating py-2">
+                 <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" class="form-control"  aria-required="true" maxlength="100"/>
+               
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+             <div class="form-floating py-2">
+                  <label asp-for="LastName"></label>
+                <input asp-for="LastName" class="form-control"  aria-required="true" maxlength="100"/>
+                 <span asp-validation-for="LastName" class="text-danger"></span>
+              </div>
+                <div class="form-floating py-2">
+                  <label asp-for="UserName"></label>
+                <input asp-for="UserName" class="form-control"  aria-required="true" maxlength="100"/>
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-floating py-2">
+                  <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" autocomplete="username" aria-required="true" />
+              
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+           
+            <button  type="submit" class="w-100 btn btn-lg btn-primary d-block mt-4">Save</button>
+        </form>
+    </div>
+  
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

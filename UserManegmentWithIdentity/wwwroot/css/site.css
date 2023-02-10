@@ -1,0 +1,32 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/*Custom styles*/
+
+.profile-picture{
+    max-height:250px !important;
+    max-width: 100% !important;
+    object-fit:cover;
+}
+
+.avatar {
+    max-height:40px !important;
+    max-width: 40px !important;
+    object-fit: cover;
+}
